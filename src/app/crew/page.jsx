@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "../components/Navbar";
 const Crew = () => {
   return ( 
-  <div>
+  <div className={styles.container}>
     <Navbar />
   </div>
 
