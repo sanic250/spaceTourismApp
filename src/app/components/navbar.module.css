@@ -1,0 +1,42 @@
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem ;
+  padding-top: 3rem;
+ align-items: center;
+}
+
+
+
+.logo{
+  
+}
+
+.navLinks{
+ 
+  backdrop-filter: blur(70px);
+  display: flex;
+  padding:2rem 6rem;
+}
+
+.navLinks ul{
+  display: flex;
+  gap:5rem;
+  padding-right: 6rem;
+}
+
+.navLinks  span{
+  font-weight: 700;
+}
+
+.navLinks a {
+  letter-spacing: 0.2rem;
+  display: flex;
+  gap:1rem;
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+  font-family: "Barlow",sans-serif;
+ 
+}
