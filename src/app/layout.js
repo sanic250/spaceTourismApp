@@ -1,4 +1,4 @@
-import { Barlow, Bellefair } from "next/font/google";
+import { Barlow, Bellefair, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -10,6 +10,11 @@ const barlow = Barlow({
 
 const bellefair = Bellefair({
   weight: ["400"],
+  subsets: ["latin"],
+});
+
+const roboto_condensed = Roboto_Condensed({
+  weight: ["100","200","400", "500"],
   subsets: ["latin"],
 });
 

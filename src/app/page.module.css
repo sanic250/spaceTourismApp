@@ -1,106 +1,177 @@
-.mainContainer{
+.mainContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../../public/assets/home/background-home-desktop.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
-.mainSection{
- 
-  height: 100%;
-  max-width: 1400px;
-  padding: 0 2rem;
-  margin: 0 auto;
-  width: 100%;
+.mainSection {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-
+  padding: 12rem 14rem 0;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.sectionLeft{
- 
+.sectionLeft {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  padding-bottom: 10rem;
 }
 
-.description{
-  width: 100%; 
-  font-size: clamp(1rem, 2vw, 1.2rem); 
+.title {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; 
+  gap: 1.5rem;
 }
 
-.title{
-  display: flex;
-  flex-direction: column;
-  gap:1.5rem;
-}
-
-.titleMain{
-  font-size: clamp(4rem, -3.5rem + 24vw, 10rem);
-  color:white;
+.titleMain {
+  font-size: clamp(4rem, 8vw, 10rem);
+  color: white;
   font-weight: 500;
-  text-decoration: none;
-  font-family: "Bellefair",sans-serif;
-  margin: 0;
-}
-.title h3{
-  color:white;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  font-weight: 100;
-  text-decoration: none;
-  font-family: "Barlow",sans-serif;
+  font-family: "Bellefair", sans-serif;
   margin: 0;
 }
 
-.description p{
+.title h3 {
+  color: white;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 100;
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+}
+
+.description {
+  width: 70%;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: white;
   line-height: 1.6;
   font-weight: 100;
-  text-decoration: none;
-  font-family: "Barlow",sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
-.description{
-  width: 70%;
-  font-size: 1.3rem;
-  justify-content: center;
+.sectionRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.sectionRight{
-  width: 100%;
-  height: 100%;
+.circle {
   display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-.sectionRight h1{
-  font-weight: 400;
-  text-decoration: none;
-  font-family: "Barlow",sans-serif;
-
- 
-}
-
-.circle{
   justify-content: center;
-  display: flex;
   align-items: center;
   width: 15rem;
   height: 15rem;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+.sectionRight h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Bellefair", sans-serif;
+  color: black;
+  margin: 0;
+}
+
+
+@media (max-width: 1024px) {
+  .mainSection {
+    flex-direction: column;
+    padding: 8rem 2rem 0;
+    text-align: center;
+  }
+
+  .sectionLeft {
+    padding-bottom: 4rem;
+  }
+
+  .sectionRight {
+    justify-content: center;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .sectionRight h1 {
+    font-size: 1.5rem;
+  }
+
+  .mainContainer {
+    background-image: url(../../public/assets/home/background-home-tablet.jpg);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .mainSection {
+    padding: 6rem 1rem 0;
+  }
+
+  .titleMain {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+
+  .title h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .description {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+
+  .circle {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .sectionRight h1 {
+    font-size: 1.2rem;
+  }
+
+  .mainContainer {
+    background-image: url(../../public/assets/home/background-home-mobile.jpg);
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0.5rem 1rem; 
+  }
+
+  .navLinks a {
+    font-size: 0.8rem; 
+  }
+
+  .logoContainer img {
+    width: 30px; 
+    height: auto;
+  }
+
+  .menuButton img {
+    width: 20px; 
+    height: auto;
+  }
 }

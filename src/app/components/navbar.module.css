@@ -1,42 +1,126 @@
-
-.container{
+.container {
   display: flex;
   justify-content: space-between;
-  padding-left: 3rem ;
-  padding-top: 3rem;
- align-items: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  background: transparent;
+  position: relative;
+  z-index: 1000;
 }
 
-
-
-.logo{
-  
+.logoContainer {
+  display: flex;
+  align-items: center;
 }
 
-.navLinks{
- 
+.navLinks {
+  display: flex;
+  padding: 2rem 3rem;
   backdrop-filter: blur(70px);
-  display: flex;
-  padding:2rem 6rem;
+  background: rgba(255, 255, 255, 0); 
+  border-radius: 10px;
 }
 
-.navLinks ul{
+.navLinks ul {
   display: flex;
-  gap:5rem;
-  padding-right: 6rem;
-}
-
-.navLinks  span{
-  font-weight: 700;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navLinks a {
-  letter-spacing: 0.2rem;
-  display: flex;
-  gap:1rem;
+  
   color: white;
-  font-weight: 100;
   text-decoration: none;
-  font-family: "Barlow",sans-serif;
- 
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #d0d6f9; 
+}
+
+.navLinks a span {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%; 
+    height: 100vh; 
+    background: rgba(54, 66, 125, 0); 
+    backdrop-filter: blur(20px);
+    padding: 5rem 2rem;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navLinks.active {
+    display: inline-block;
+    transform: translateX(0); 
+  }
+
+  .navLinks ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .container {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .navLinks {
+    width: 50%; 
+  }
+
+  .navLinks a {
+    font-size: 1rem;
+  }
+
+
+  .menuButton {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
