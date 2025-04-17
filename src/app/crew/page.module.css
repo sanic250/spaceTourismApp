@@ -9,6 +9,174 @@
   min-height: 100vh;
 }
 
+
 .mainSection{
-  color:white;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 4rem;
+  max-width: 1340px;
+  align-items: flex-start;
+  color: white;
+
 }
+
+
+
+.mainTitle{
+   max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  letter-spacing: 0.3rem;
+
+ 
+ 
+}
+
+.mainTitle h3{
+  display: flex;
+  font-family: "Roboto Condensed",sans-serif;
+  font-weight: 400;
+  gap:1rem;
+  font-size: 1.3rem;
+  
+}
+
+.mainTitle span{
+  display: flex;
+  align-items: center;
+  
+  color: grey;
+  font-size: 1.3rem;
+  
+}
+
+.middle{
+  display: flex;
+}
+
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  width: 50%;
+}
+
+
+
+.leftSide h3{
+  color: white;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 100;
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  width: 70%;
+}
+
+.leftSide h2{
+   font-family: "Bellefair",sans-serif;
+  padding: 0;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 300;
+  width: 70%;
+}
+
+.leftSide p{
+  font-weight: 300;
+  text-align: start;
+  font-size: 1.3rem;
+  width: 70%;
+  color: #d0d0d0;
+  line-height: 1.6;
+
+  
+}
+
+.image {
+  width: 100%;
+  max-width: 445px;
+  height: auto;
+  object-fit: contain;
+}
+
+.switch{
+  display: flex;
+  gap:2.5rem;
+  width: 70%;
+  padding-bottom: 4rem;
+  
+}
+
+.rightSide { 
+  display: flex;  
+  justify-content: center; 
+  align-items: flex-end; 
+  min-height: 500px; 
+  height: 500px;}
+
+.buttonSwitch{
+  background-color: rgba(255, 255, 255, 0.46);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonSwitch:hover,
+.buttonSwitch:focus {
+  background-color: white;
+  outline: none;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.buttonSwitch.active {
+  background-color: white;
+  box-shadow: 0 0 0 2px grey;
+}
+
+.mainText{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+@media (max-width: 811px) {
+  .mainSection, .middle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainTitle{
+    padding-left: 4rem;
+  }
+
+  .leftSide, .mainText {
+    width: 100%;
+    align-items: center;
+  }
+
+  .switch {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .leftSide h2{
+    font-size: 2rem;
+  }
+  .rightSide{
+    min-height: 310px;
+    height: 200px;
+    padding-bottom: 10rem;
+  }
+}
+

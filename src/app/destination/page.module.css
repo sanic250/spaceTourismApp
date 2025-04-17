@@ -19,7 +19,6 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  align-items: center;
   padding-top: 4rem;
   max-width: 1340px;
 
@@ -27,10 +26,12 @@
 
 .topTitle{
   max-width: 1340px;
-  
+  width: 100%;
   margin: 0 auto;
-  
+  color: white;
   letter-spacing: 0.3rem;
+
+ 
  
 }
 .topTitle h2{
@@ -47,7 +48,7 @@
 .topTitle span {
   color: gray;
   padding-right: 1rem;
-  font-weight: bold;
+  
 }
 
 .leftSide{
@@ -119,72 +120,87 @@
   font-weight: 300;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 1024px) {
   .mainSection {
-    max-width: 1024px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .topTitle {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .mainText h2 {
+    font-size: 4rem;
+  }
+
+  .mainText > p {
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .leftSide,
+  .rightSide {
     width: 100%;
-    margin: 0 auto;
-    display: block;
-   padding-left: 14rem;
-   padding-top: 2rem;
-  
+    justify-content: center;
+    align-items: center;
   }
 
-  .mainText p{
-    width: 50%;
+  .image {
+    width: 60%;
   }
 
- 
-  .image{
-    width: 35%;
-    padding-top: 0;
-    height: auto;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-  }
-  .topTitle{
-    padding-left: 8rem;
+  .distanceInfo {
+    gap: 3rem;
+    justify-content: center;
   }
 }
 
-@media (max-width: 360px) {
 
-          .mainSection{
-            padding: 2rem;
-            margin: 0 auto;
-          }
+@media (max-width: 600px) {
+  .container {
+    background-image: url(../../../public/assets/destination/background-destination-mobile.jpg);
+  }
 
-          .mainText p{
-            font-size: 1.2rem;
-            width: 80%;
-          }
+  .topTitle h2 {
+    font-size: 1rem;
+  }
 
-          .mainText h2{
-            font-size: 5rem;
-          }
-          
-          .image{
-            padding-left: 4rem;
-          }
+  .mainText h2 {
+    font-size: 3rem;
+  }
 
-          .travelDesc{
-            font-size: 1.2rem;
-          }
-          .distanceInfo{
-            gap:2rem;
-          }
-          .time h3{
-            font-size: 1.5rem;
-          }
+  .mainText > p {
+    font-size: 1rem;
+    width: 100%;
+  }
 
-          .distance h3{
-            font-size: 1.5rem;
-          }
+  .image {
+    width: 70%;
+  }
 
-          .topTitle{
-              padding-left: 1rem;
-              font-size: 0.6rem;
-              width: 100%;
-              font-weight: bold;
-          }
+  .switch {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .travelDesc {
+    font-size: 1rem;
+  }
+
+  .distanceInfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .distanceInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
 }
