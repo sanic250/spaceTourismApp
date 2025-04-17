@@ -29,10 +29,18 @@ const Destination = () => {
         </div>
         <div className={styles.mainSection}>
           <div className={styles.leftSide}>
-            {value === 1 && <Image className={styles.image} src={moon} alt="moon" />}
-            {value === 2 && <Image className={styles.image} src={mars} alt="mars" />}
-            {value === 3 && <Image className={styles.image} src={europa} alt="europa" />}
-            {value === 4 && <Image className={styles.image} src={titan} alt="titan" />}
+            {value === 1 && (
+              <Image className={styles.image} src={moon} alt="moon" />
+            )}
+            {value === 2 && (
+              <Image className={styles.image} src={mars} alt="mars" />
+            )}
+            {value === 3 && (
+              <Image className={styles.image} src={europa} alt="europa" />
+            )}
+            {value === 4 && (
+              <Image className={styles.image} src={titan} alt="titan" />
+            )}
           </div>
           <div className={styles.rightSide}>
             <div className={styles.switch}>
@@ -94,9 +102,9 @@ const Destination = () => {
               <div className={styles.mainText}>
                 <h2>MARS</h2>
                 <p>
-                  Don't forget to pack your hiking boots. You'll need them to
+                  Dont forget to pack your hiking boots. You will need them to
                   tackle Olympus Mons, the tallest planetary mountain in our
-                  solar system. It's two and a half times the size of Everest!
+                  solar system. Its two and a half times the size of Everest!
                 </p>
                 <div className={styles.distanceInfo}>
                   <div className={styles.distance}>
@@ -115,7 +123,7 @@ const Destination = () => {
                 <h2>EUROPA</h2>
                 <p>
                   The smallest of the four Galilean moons orbiting Jupiter,
-                  Europa is a winter lover's dream. With an icy surface, it's
+                  Europa is a winter lovers dream. With an icy surface, its
                   perfect for a bit of ice skating, curling, hockey, or simple
                   relaxations in your snug wintery cabin.
                 </p>
